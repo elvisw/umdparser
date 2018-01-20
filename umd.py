@@ -335,7 +335,7 @@ class UMDFile(object):
         if len(self.publisher)!=0:
             self._writesection(8,0,len(self.publisher.encode(self.encoding)),ufile)
         if len(self.vendor)!=0:
-            self._writesection(7,0,len(self.vendor.encode(self.encoding)),ufile)
+            self._writesection(9,0,len(self.vendor.encode(self.encoding)),ufile)
         self._writesection(11,0,4,ufile)
         self.additionalCheck=0x3000+random.randint(0,0xfff-1)
         self._writesection(0x83,0,4,ufile)
